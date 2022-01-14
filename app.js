@@ -11,8 +11,8 @@ function init() {
   const lilyPostition = 1
   const slowCars = []
   const fastCars = []
-  const slowWoods = []
-  const fastWoods = []
+  const slowFishes = []
+  const fastFishes = []
 
   // * Create grid
   for (let i = 0; i < cellCount; i++) {
@@ -62,24 +62,25 @@ function init() {
   }
   document.addEventListener('keyup', handleKeyUp)
 
-  // * Create river and wood to be able to move later
+  // * Create river
   const river2 = cells.slice(20, 30)
   river2.forEach((element, i) => {
     element.classList.add('river')
     if (i === 2 || i === 5 || i === 8) {
-      element.classList.add('wood')
-      fastWoods.push(element)
+      element.classList.add('fish1')
+      fastFishes.push(element)
     }
   })
   const river1 = cells.slice(40, 50)
   river1.forEach((element, i) => {
     element.classList.add('river')
     if (i === 2 || i === 6 || i === 9) {
-      element.classList.add('wood')
-      slowWoods.push(element)
+      element.classList.add('fish')
+      slowFishes.push(element)
     }
   })
-  // * Create road and car to be able to move later
+
+  // * Create road
   const road2 = cells.slice(60, 70)
   road2.forEach((element, i) => {
     element.classList.add('road')
@@ -104,11 +105,11 @@ function init() {
     element.classList.add('car1')
   })
 
-  slowWoods.forEach((element) => {
-    element.classList.add('wood')
+  slowFishes.forEach((element) => {
+    element.classList.add('fish')
   })
-  fastWoods.forEach((element) => {
-    element.classList.add('wood')
+  fastFishes.forEach((element) => {
+    element.classList.add('fish1')
   })
 
   // * Slow Items Movement
@@ -127,16 +128,16 @@ function init() {
     winOrLose()
   }, 300)
 
-  slowWood = setInterval(() => {
-    slowWoods.forEach((wood, i) => {
-      const riverPosition = river1.indexOf(wood)
-      river1[riverPosition].classList.remove('wood')
+  slowFish = setInterval(() => {
+    slowFishes.forEach((fish, i) => {
+      const riverPosition = river1.indexOf(fish)
+      river1[riverPosition].classList.remove('fish')
       if (riverPosition === river1.length - 1) {
-        slowWoods[i] = river1[0]
+        slowFishes[i] = river1[0]
       } else {
-        slowWoods[i] = river1[riverPosition + 1]
+        slowFishes[i] = river1[riverPosition + 1]
       }
-      slowWoods[i].classList.add('wood')
+      slowFishes[i].classList.add('fish')
     })
     winOrLose()
   }, 300)
@@ -144,8 +145,8 @@ function init() {
   // * Fast Items Movement
   // * Move Fast cars
   fastCar = setInterval(() => {
-    fastCars.forEach((car1, i) => {
-      const roadPosition = road2.indexOf(car1)
+    fastCars.forEach((car, i) => {
+      const roadPosition = road2.indexOf(car)
       road2[roadPosition].classList.remove('car1')
       if (roadPosition === 0) {
         fastCars[i] = road2[9]
@@ -157,16 +158,16 @@ function init() {
     winOrLose()
   }, 300)
 
-  fastWood = setInterval(() => {
-    fastWoods.forEach((wood, i) => {
-      const riverPosition = river2.indexOf(wood)
-      river2[riverPosition].classList.remove('wood')
+  fastFish = setInterval(() => {
+    fastFishes.forEach((fish, i) => {
+      const riverPosition = river2.indexOf(fish)
+      river2[riverPosition].classList.remove('fish1')
       if (riverPosition === 0) {
-        fastWoods[i] = river2[9]
+        fastFishes[i] = river2[9]
       } else {
-        fastWoods[i] = river2[riverPosition - 1]
+        fastFishes[i] = river2[riverPosition - 1]
       }
-      fastWoods[i].classList.add('wood')
+      fastFishes[i].classList.add('fish1')
     })
   }, 300)
 
@@ -181,7 +182,9 @@ function init() {
       addFrog(frogStartPosition)
     } else if (
       cells[frogCurrentPosition].classList.contains('car') ||
-      cells[frogCurrentPosition].classList.contains('car1')
+      cells[frogCurrentPosition].classList.contains('car1') ||
+      cells[frogCurrentPosition].classList.contains('fish') ||
+      cells[frogCurrentPosition].classList.contains('fish1')
     ) {
       result.innerHTML = 'You Lost!'
       result.style.color = 'red'

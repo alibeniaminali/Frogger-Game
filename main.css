@@ -132,26 +132,31 @@ h2 {
   width: 100%;
   height: 100%;
 }
-.grid .wood::after {
+.grid .fish::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('88288041-dark-wood-texture.png');
+  background-image: url('71-714108_generic-fish-clip-art-fish-clipart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
-.grid .wood1::after {
+.grid .fish1::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('88288041-dark-wood-texture.png');
+  background-image: url('fish2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 100%;
   height: 100%;
   border-radius: 10px;
