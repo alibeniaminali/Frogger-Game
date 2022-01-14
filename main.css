@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Poppins:wght@100&family=Roboto+Mono:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section {
+  width: 400px;
+  height: 700px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(245, 225, 174);
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 17px;
+}
+p {
+  padding: 7px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: 900;
+}
+button {
+  font-size: 25px;
+  color: floralwhite;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(144, 198, 149);
+  font-family: 'Lobster', sans-serif;
+  border-radius: 8px;
+}
+h2 {
+  font-family: 'Lobster', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
+#result {
+  font-family: 'Lobster', sans-serif;
+  color: chocolate;
+  font-size: 60px;
+  text-decoration: none;
+  text-shadow: 1px 2px white;
+  border-style: double;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.grid-wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  align-items: center;
+  background-color: bisque;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 700px;
+  width: 700px;
+}
+.grid div {
+  flex-grow: 1;
+  height: 10%;
+  width: 10%;
+}
+.grid div.frog {
+  background-image: url('pngtree-cute-green-cartoon-frog-png-image_951640.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.grid div.lily {
+  background-image: url('picscut-lily-pad-clipart-water-cute-pink-png-image_23282.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: rotate(160deg);
+}
+.river {
+  position: relative;
+  background-color: rgba(24, 127, 211, 0.21);
+}
+.road {
+  position: relative;
+  background-color: rgba(1, 0, 1, 0.21);
+  border-bottom: white 2px dashed;
+  border-top: white 2px dashed;
+}
+.grid .car1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images-art-transportation-planner-two-cars-clipart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.grid .car::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('pichur-2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.grid .wood::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('88288041-dark-wood-texture.png');
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.grid .wood1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('88288041-dark-wood-texture.png');
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
