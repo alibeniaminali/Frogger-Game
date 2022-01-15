@@ -1,6 +1,7 @@
 function init() {
   const grid = document.querySelector('.grid')
   const result = document.querySelector('#result')
+  const start = document.querySelector('#start-game')
   const width = 10
   const cellCount = width * width
   const cells = []
@@ -13,6 +14,14 @@ function init() {
   const fastCars = []
   const slowFishes = []
   const fastFishes = []
+  const frogJump = document.querySelector('#jump')
+  frogJump.volume = 0.4
+  const carCrash = document.querySelector('#crash')
+  carCrash.volume = 0.5
+  const frogEaten = document.querySelector('#eaten')
+  frogEaten.volume = 0.7
+  const winSound = document.querySelector('#win')
+  winSound.volume = 0.8
 
   // * Create grid
   for (let i = 0; i < cellCount; i++) {
@@ -59,6 +68,7 @@ function init() {
     }
     addFrog(frogCurrentPosition)
     winOrLose()
+    frogJump.play()
   }
   document.addEventListener('keyup', handleKeyUp)
 
@@ -112,6 +122,52 @@ function init() {
     element.classList.add('fish1')
   })
 
+  // * Win or Lose function and collision detection
+  function winOrLose() {
+    if (cells[1].classList.contains('frog')) {
+      winSound.play()
+      result.innerHTML = 'You Won!'
+      result.style.color = 'green'
+      result.style.fontSize = '50px'
+      result.style.padding = '2px'
+      start.innerHTML = 'Try Again!'
+      start.style.backgroundColor = 'red'
+      removeFrog(frogCurrentPosition)
+      frogCurrentPosition = frogStartPosition
+      addFrog(frogStartPosition)
+      document.removeEventListener('keyup', handleKeyUp)
+    } else if (
+      cells[frogCurrentPosition].classList.contains('car') ||
+      cells[frogCurrentPosition].classList.contains('car1')
+    ) {
+      carCrash.play()
+      result.innerHTML = 'Car crash!'
+      result.style.color = 'red'
+      start.innerHTML = 'Try Again!'
+      start.style.backgroundColor = 'red'
+      removeFrog(frogCurrentPosition)
+      frogCurrentPosition = frogStartPosition
+      addFrog(frogStartPosition)
+      document.removeEventListener('keyup', handleKeyUp)
+    } else if (
+      cells[frogCurrentPosition].classList.contains('fish') ||
+      cells[frogCurrentPosition].classList.contains('fish1')
+    ) {
+      frogEaten.play()
+      result.innerHTML = 'You got eaten!'
+      result.style.color = 'red'
+      start.innerHTML = 'Try Again!'
+      start.style.backgroundColor = 'red'
+      removeFrog(frogCurrentPosition)
+      frogCurrentPosition = frogStartPosition
+      addFrog(frogStartPosition)
+      document.removeEventListener('keyup', handleKeyUp)
+    }
+  }
+  // * Start game button
+  function startGame() {
+    window.location.reload()
+  }
   // * Slow Items Movement
   // * Move Slow Cars
   slowCar = setInterval(() => {
@@ -169,29 +225,8 @@ function init() {
       }
       fastFishes[i].classList.add('fish1')
     })
+    winOrLose()
   }, 300)
-
-  function winOrLose() {
-    if (cells[1].classList.contains('frog')) {
-      result.innerHTML = 'You Won!'
-      result.style.color = 'green'
-      result.style.fontSize = '50px'
-      result.style.padding = '2px'
-      removeFrog(frogCurrentPosition)
-      frogCurrentPosition = frogStartPosition
-      addFrog(frogStartPosition)
-    } else if (
-      cells[frogCurrentPosition].classList.contains('car') ||
-      cells[frogCurrentPosition].classList.contains('car1') ||
-      cells[frogCurrentPosition].classList.contains('fish') ||
-      cells[frogCurrentPosition].classList.contains('fish1')
-    ) {
-      result.innerHTML = 'You Lost!'
-      result.style.color = 'red'
-      removeFrog(frogCurrentPosition)
-      frogCurrentPosition = frogStartPosition
-      addFrog(frogStartPosition)
-    }
-  }
+  start.addEventListener('click', startGame)
 }
 window.addEventListener('DOMContentLoaded', init)

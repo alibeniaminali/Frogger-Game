@@ -10,17 +10,34 @@
   </head>
   <body>
     <section>
-      <h2>Instructions : </h2>
-        <p>The object of the game is to hop across the road and get back to the lily pad.
-          Use the keyboard arrow keys to navigate your Froggie.
-        <br>
-        <br>
-        Avoid traffic and swim across the canal. Avoid being eaten from the fishes and herons!
+      <h2>Instructions :</h2>
+      <p>
+        The object of the game is to hop across the road and get back to the
+        lily pad. Use the keyboard arrow keys to navigate your Froggie.
+        <br />
+        <br />
+        Avoid traffic and swim across the canal. Avoid being eaten by the
+        fishes!
       </p>
-    <button id="start-button">Good Luck!!</button>
-    <h2 id="result">Result</h2>
+      <h2 id="result">Result</h2>
+      <button id="start-game">Game is on!</button>
     </section>
-        <div class="grid-wrapper">
-          <div class="grid"></div>
-        </div>
+    <!-- Grid -->
+    <div class="grid-wrapper">
+      <div class="grid"></div>
+    </div>
+    <!-- Audio -->
+    <audio id="jump">
+      <source src="sounds/mixkit-player-jumping-in-a-video-game-2043.wav" />
+    </audio>
+    <audio id="crash">
+      <source src="sounds/mixkit-car-double-horn-719.wav" />
+    </audio>
+    <audio id="eaten">
+      <source src="sounds/mixkit-hungry-man-eating-2252.wav" />
+    </audio>
+    <audio id="win">
+      <source src="sounds/mixkit-winning-notification-2018.wav" />
+    </audio>
+  </body>
 </html>
