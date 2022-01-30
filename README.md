@@ -97,6 +97,6 @@ The main difficulty here is animating the obstacles and detecting collision. The
 👉 Time Left future
 
 ## Author info
-- LinkedIn - [Ali Ali](linkedin.com/in/alibeniaminali)
+- LinkedIn - [Ali Ali](https://www.linkedin.com/in/alibeniaminali/)
 
 
