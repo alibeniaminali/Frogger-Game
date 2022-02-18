@@ -3,7 +3,7 @@
 
 ## Where to play
 - No installation needed!
-- Follow the link and play 👉 [here](https://alibeniaminali.github.io/SEI-Project-1/) 👈
+- Follow the link and play 👉 [here](https://alibeniaminali.github.io/Project-1/) 👈
 
 ## Timeline
 - 7 days
