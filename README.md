@@ -22,9 +22,6 @@ This was my first project for General Assembly's Software Engineering Immersive 
 - The game should be playable for one player.
 - The obstacles should be auto generated.
 
-<!-- ## Challenges
-The main difficulty here is animating the obstacles and detecting collision. There were a number of timers to manage across the whole game, which can be easily get out of hand. -->
-
 ## How to Play
 - This game is a desktop-only website and requires the use of your keyboard arrow keys.
 - Please, take advantage of full-screen mode for a better experience.
@@ -41,7 +38,7 @@ The main difficulty here is animating the obstacles and detecting collision. The
 #### Creating the grid
 - Instead of creating the grid using HTML5 and adding 100 "div" tag lines to it.
   </br>
-- I decided to take different approach and add the grid cells in an array and use a for loop instead.
+- I decided to take a different approach and add the grid cells in an array and use a for loop instead.
   </br>
 - This way the code looked more organised and clean.
   
@@ -71,7 +68,7 @@ The main difficulty here is animating the obstacles and detecting collision. The
 
 ## Challenges 
 - The most difficult part of this project was to make the obstacles move and add opposite movement for the next line of obstacles. 
-- At the end I used setInterval method which repeatedly called the function, with a fixed time delay between each call. 
+- At the end I used the setInterval method which repeatedly called the function, with a fixed time delay between each call. 
 
 </br>
 
@@ -80,12 +77,12 @@ The main difficulty here is animating the obstacles and detecting collision. The
 </br>
 
 ## Wins 
-- Writting the Frogger movement logic snippets above
+- Writing the Frogger movement logic snippets above
 - Having a smoothly playable and fully functional Frogger game
 - Adding separate sound effects to different situations
 - Styling my first game
 ## Future Improvements
-- The project was quite challenging for me and I ended with a simple and clean game ,that I might consider improving in the future.
+- The project was quite challenging for me and I ended with a simple and clean game that I might consider improving in the future.
 - Improvements that I might add would be :
 </br>
 👉 Mobile screen controls
