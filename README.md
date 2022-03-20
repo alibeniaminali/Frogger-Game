@@ -1,4 +1,4 @@
-# Froger Game
+# Frogger Game
 - Created by [Ali Ali](https://github.com/alibeniaminali)
 
 ## Where to play
