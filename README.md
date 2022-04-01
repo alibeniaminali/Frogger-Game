@@ -1,8 +1,4 @@
-There are pictures attached too. Please visit the link to see the end result.
-
-https://github.com/alibeniaminali/Frogger-Game
-
-# Froggie Game
+# Frogger Game
 - Created by [Ali Ali](https://github.com/alibeniaminali)
 
 ## Where to play
