@@ -1,4 +1,8 @@
-# Frogger Game
+There are pictures attached too. Please visit the link to see the end result.
+
+https://github.com/alibeniaminali/Frogger-Game
+
+# Froggie Game
 - Created by [Ali Ali](https://github.com/alibeniaminali)
 
 ## Where to play
@@ -28,9 +32,9 @@ This was my first project for General Assembly's Software Engineering Immersive 
 - Sound on! 🔉
 #### To win ✔️ :
 - The object of the game is simply to navigate the little frog across the road, swim across the canal and get to the lily pad on the other side of the game board.
-- To make things more challenging there are numerous moving obstacles that the frog must avoid to reach his destination.
+- To make things more challenging there are numerous moving obstacles that the frog must avoid to reach its destination.
 #### To lose ☠️ :
-- The frog must avoid the traffic 🚙 , swim across the canal and be cautious of unfriendly fish 🐟 ! 
+- The frog must avoid the traffic 🚙, swim across the canal and be cautious of unfriendly fish 🐟 ! 
 ### To play again
 - Once the win/lose condition has been met, the "Try Again!" button must be pressed to play again.
 
@@ -47,8 +51,8 @@ This was my first project for General Assembly's Software Engineering Immersive 
 ![Screenshot 2022-01-16 at 00 37 42](https://user-images.githubusercontent.com/94930059/149642790-8e703a22-52e2-4d24-b5e9-2448df7ec846.png)
 </br>
 
-#### Adding the road,canals and the obstacles 
-- Using slice() method I created a shallow copy of a portion of the cells array into a new array object selected from start to end where start and end represent the index of items in that array.
+#### Adding the road, canals and the obstacles 
+- Using slice() method, I created a shallow copy of a portion of the cells array into a new array object selected from start to end where start and end represent the index of items in that array.
 </br>
 
 ![Screenshot 2022-01-16 at 00 58 25](https://user-images.githubusercontent.com/94930059/149643243-082e59b4-a310-4345-a804-3c08b52c7a6a.png)
@@ -81,19 +85,21 @@ This was my first project for General Assembly's Software Engineering Immersive 
 - Having a smoothly playable and fully functional Frogger game
 - Adding separate sound effects to different situations
 - Styling my first game
+
 ## Future Improvements
-- The project was quite challenging for me and I ended with a simple and clean game that I might consider improving in the future.
+- The project was quite challenging for me and I ended up with a simple and clean game that I might consider improving in the future.
 - Improvements that I might add would be :
 </br>
 👉 Mobile screen controls
 </br>
-👉 Size responsive
+👉 Mobile responsive
 </br>
 👉 Multiple frogs and lilypads
 </br>
-👉 Time Left future
+👉 Time Left feature
 
 ## Author info
-- LinkedIn - [Ali Ali](https://www.linkedin.com/in/alibeniaminali/)
+- LinkedIn  - [Ali Ali](https://www.linkedin.com/in/alibeniaminali/)</br>
+- Email - alibeniaminali@gmail.com
 
 
